@@ -1,0 +1,35 @@
+[package]
+name = "pallet-balance-fetcher"
+version = "0.1.0"
+edition = "2018"
+authors = ["Ahmet Kulekci"]
+description = "Fetching account balances"
+homepage = "https://substrate.dev"
+repository = "https://github.com/paritytech/substrate"
+readme = "README.md"
+
+[dependencies]
+# Substrate paketleri
+frame-support = { version = '4.0.0-dev', default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'master' }
+frame-system = { version = '4.0.0-dev', default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'master' }
+pallet-balances = { version = '4.0.0-dev', default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'master' }
+sp-runtime = { version = '24.0.0', default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'master' }
+sp-core = { version = '21.0.0', default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'master' }
+sp-std = { version = '8.0.0', default-features = false, git = 'https://github.com/paritytech/substrate', branch = 'master' }
+bandersnatch_vrfs = { git = "https://github.com/w3f/ring-vrf", branch = "master" }
+
+
+# Kriptografi ve diğer yardımcı kütüphaneler
+parity-scale-codec = { version = "3.6.9", default-features = false, features = ["derive"] }
+
+[features]
+default = ["std"]
+std = [
+    "frame-support/std",
+    "frame-system/std",
+    "pallet-balances/std",
+    "sp-runtime/std",
+    "sp-core/std",
+    "sp-std/std",
+    "parity-scale-codec/std",
+]
