@@ -1,0 +1,19 @@
+[package]
+name = "weight-overflow-pallet"
+version = "0.1.0"
+authors = ["Ahmet Kulekci"]
+edition = "2018"
+
+[dependencies]
+frame-support = { version = "28.0.0", features = ["std"] }
+frame-system = { version = "28.0.0" }
+codec = { version = "0.0.0" }
+
+[features]
+default = ["runtime-api"]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[workspace]
+members = ["runtime"]

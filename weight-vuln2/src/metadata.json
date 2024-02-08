@@ -1,0 +1,26 @@
+{
+    "name": "weight-overflow-pallet",
+    "version": "1.0.0",
+    "author": "Ahmet Kulekci",
+    "description": "Weight Overflow Vulnerability Pallet",
+    "dependencies": [],
+    "runtime": {
+      "types": [],
+      "genesis": [],
+      "extrinsics": [
+        {
+          "name": "doSomething",
+          "args": [],
+          "docs": ["Do something"]
+        }
+      ],
+      "calls": [
+        {
+          "name": "getSomething",
+          "args": [],
+          "docs": ["Get something"]
+        }
+      ]
+    }
+  }
+  
